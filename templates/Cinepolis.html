@@ -1,0 +1,70 @@
+{% extends "layoutCinepolis.html" %}
+
+{% block content %}
+
+<div class="container">
+    <form class="form-horizontal" action="/validar" method="post">
+    <div class="row">
+       <h1 class="text-center">Cinepolis</h1>
+       <div class="span6">
+        <h3 class="text-center">Entradas</h3>
+       <div>
+        <div class="control-group">
+            <label for="" class="control-label">Nombre:</label>
+            <div class="controls">
+                <input type="text" name="txtName" value="">
+            </div>
+        </div>
+        <div class="control-group">
+            <label for="" class="control-label">cantidad de Compradores:</label>
+            <div class="controls">
+                <input type="text" name="txtCompradores" value="">
+            </div>
+        </div>
+        <div class="control-group">
+            <label for="" class="control-label">Tarjeta cineco:</label>
+            <div class="controls">
+                <label for="html" class="checkbox inline">Si</label>
+                <input type="radio" id="html" name="tarjeta" value="1">
+                <label for="css" class="checkbox inline">No</label>
+                <input type="radio" id="css" name="tarjeta" value="0">
+            </div>
+        </div>
+        <div class="control-group">
+            <label for="" class="control-label">cantidad de Boletos:</label>
+            <div class="controls">
+                <input type="text" name="txtBoletos" value="">
+            </div>
+        </div>
+       </div>
+       </div>
+       <div class="span6">
+           <h3 class="text-center">Salidas</h3>
+           <div>
+            <div class="control-group">
+                <label for="" class="control-label">Valor a pagar:</label>
+                <div class="controls">
+                    <input type="text" name="txtPagar" value="" disabled>
+                </div>
+            </div>
+           </div>
+       </div>
+
+    </div>
+    <div class="row span6">
+        <h2 class="text-center">Acciones</h2>
+        <div class="control-group container">
+            <div class="controls">
+                <button type="submit" class="btn btn-default btn-primary">
+                Procesar
+                </button>
+                <button type="button" class="btn btn-default btn-primary">
+                 Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+{% from "_macros.html" import render_input %}
+<form class="form" action="/resultado" method="post">
+    <div class="container">
+        {% for i in range(1,cajas+1) %}
+        <div class="control-group">
+            <label for="" class="control-label">Caja {{i}}:</label>
+            <div class="controls">
+                <input type="number" name="txtCaja{{i}}" value="">
+            </div>
+        <!--{{render_input("txtName{% i %}","Numero de cajas:",type="number")}}-->
+
+        {% endfor %}
+        <div class="controls">
+            <button type="submit" class="btn btn-default btn-primary">
+            Procesar cajas
+            </button>
+        </div>
+    </form>
+
+{% endblock %}

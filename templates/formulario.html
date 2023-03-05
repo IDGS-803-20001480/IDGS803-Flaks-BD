@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+{% from "_macros.html" import render_input %}
+<div class="container">
+<form name="form" method="post" novalidate>
+    <div class="control_group">
+        <div class="control">
+            {{render_input("txtMatricula","Matricula")}}
+            {{render_input("txtNombre","Nombre")}}
+            {{render_input("txtEdad","Edad",type="number")}}
+            {{render_input("txtEmail","Email",type="email")}}
+            {{render_input("txtContrasena","Contrasena",type="password")}}
+            
+        </div>
+    </div>
+    <div class="controls">
+        <button type="submit" class="btn btn-default btn-primary">
+        Enviar
+        </button>
+    </div>
+</form>
+</div>
+{% endblock %}

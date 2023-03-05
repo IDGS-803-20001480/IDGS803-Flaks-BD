@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<form class="form" action="/cajasForm" method="post">
+<div class="container">
+    <div class="control-group">
+        <label for="" class="control-label">Numero de cajas:</label>
+        <div class="controls">
+            <input type="number" name="numeroCajas" value="">
+        </div>
+    </div>
+    <div class="controls">
+        <button type="submit" class="btn btn-default btn-primary">
+        Procesar
+        </button>
+    </div>
+</form>
+
+
+{% endblock %}

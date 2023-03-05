@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="col-xs-6">
+    {% from "_macros.html" import render_field %}
+    <form action="" method="post" novalidate>
+      {{form.csrf_token}}
+            <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+        {{render_field(form.matricula)}}
+        {{render_field(form.nombre)}}
+        {{render_field(form.apaterno)}}
+        {{render_field(form.email)}}
+        <div class="controls">
+          <button type="submit" class="btn btn-default btn-primary">
+          Enviar
+          </button>
+      </div>
+    </form>
+  </div>
+   <div class="col-xs-6">
+   </div>
+
+{% endblock %}

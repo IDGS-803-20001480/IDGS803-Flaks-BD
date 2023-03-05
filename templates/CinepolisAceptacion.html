@@ -1,0 +1,13 @@
+{% extends "layoutCinepolis.html" %}
+
+    {% block content %}
+    
+    <div class="container span4 offset4">
+    <h2>Nombre:{{name}}</h2>
+    <h2>boletos comprados: {{boletos}}</h2>
+    <h2>Se aplico un descuento de {{des}}%</h2>
+    <h2>El descuento por tarjeta:{{tarjeta}}%</h2>
+    <h2>El pago es de:$ {{pago}}</h2>
+    </div>
+
+    {% endblock %}
